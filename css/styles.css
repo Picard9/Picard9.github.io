@@ -1,0 +1,93 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1em;
+    color: black;
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-size: cover;
+}
+
+#wrapper {
+    background-color: lightgray;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+section {
+    padding: 10px;
+    height: 74.5vh;
+}
+
+nav a {
+    color: gold;
+    text-decoration: none;
+}
+
+.fas {
+    margin-right: 10px;
+}
+
+.favorite {
+    display: block;
+}
+
+h1 {
+    font-style: italic;
+    font-size: 1.5em;
+    letter-spacing: .4em;
+    color: silver;
+}
+
+h2 {
+    font-style: italic;
+    font-size: 1.2em;
+    letter-spacing: .4em;
+}
+
+p {
+    line-height: 1.5;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+header {
+    background: url('../images/js-javascript.png') no-repeat;
+    background-position: 100% 50%;
+    background-size: 70px 70px;
+    padding: 21px;
+    align-items: center;
+    background-color: black;
+    color: silver;
+    border-bottom: 2px solid gold;
+    display: flex;
+}
+
+footer {
+    background-color: black;
+    padding: 21px;
+    clear: both;
+    color: silver;
+    border-top: 2px solid gold;
+    text-align: center;
+    font-size: small;
+}
+
+.left {
+    float: left;
+    margin: 20px 20px 20px 0;
+    width: 330px;
+}
+
+.right {
+    float: right;
+    margin-left: 20px;
+    width: 590px;
+}
+
+/* Style on the Assignment 3 */
+
+.welcome{
+    font-size: 1.3em;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: gold;
+}
