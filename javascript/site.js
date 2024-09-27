@@ -38,4 +38,5 @@ if(isMorning){
     welcome.textContent = 'Good Evening and welcome to my site!'
 }
 
+// Store a message in local storage
 localStorage.setItem(key, message)
