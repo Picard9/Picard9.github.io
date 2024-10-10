@@ -42,7 +42,7 @@ if(isMorning){
 localStorage.setItem(key, message)
 
 
-// CODE FROM WEEK 5
+// CODE FOR ASSIGMENT WEEK 5
 
 const urls = [
     'https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
