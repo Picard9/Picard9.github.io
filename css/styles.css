@@ -29,6 +29,8 @@ nav a {
 
 .favorite {
     display: block;
+    font-size: 1em;
+    line-height: 1.6;
 }
 
 h1 {
@@ -43,9 +45,12 @@ h2 {
     font-size: 1.2em;
     letter-spacing: .4em;
 }
+hr{
+    width: 78%;
+}
 
 p {
-    line-height: 1.5;
+    line-height: 1.6;
     font-style: italic;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
@@ -74,14 +79,20 @@ footer {
 
 .left {
     float: left;
-    margin: 20px 20px 20px 0;
-    width: 330px;
+    margin: 10px 10px 10px 0;
+    width: 200px;
 }
 
 .right {
+    display: flex;
+    flex-direction: column;
     float: right;
-    margin-left: 20px;
-    width: 590px;
+    margin-left: 56px;
+    width: 200px;
+}
+.right h3 {
+    display: flex;
+    justify-content: center;
 }
 
 /* Style on the Assignment 3 */
@@ -90,4 +101,35 @@ footer {
     font-size: 1.3em;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: gold;
+}
+
+/* Code from Week 5 */
+#carousel {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    gap: 10px;
+    padding: 20px auto;
+}
+
+#carousel img {
+    max-height: 137px;
+    aspect-ratio: auto 300 / 400;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-top: 20px;
+
+}
+
+#buttons {
+    display: flex;
+    justify-content: left;
+    position:relative;
+    left: 284px;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
 }
