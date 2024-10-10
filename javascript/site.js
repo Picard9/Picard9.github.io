@@ -82,7 +82,7 @@ previous.addEventListener('click', () => {
 
  setInterval(() => {
      // code to run EVERY 5 seconds
-     currentImage = (currentImage < urls.length - 1) ? currentImage + 1 : 0; // Loop back to 0 after the last image
+     currentImage = (currentImage < urls.length - 1) ? currentImage + 1 : 0; 
     showImages();
  }, 5000)
 
