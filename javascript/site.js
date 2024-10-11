@@ -68,17 +68,24 @@ const showImages = () => {
 const previous = document.querySelector('#prev')
 const next = document.querySelector('#next')
 const carousel = document.querySelector('#carousel')
+
+// if the condition is true (currentImage < urls.length - 1), increment currentImage, if false set the currentImage to its current value
+
 next.addEventListener('click', () => {
-
-
-    currentImage = (currentImage < urls.length - 1) ? currentImage +1 : currentImage;
+    currentImage = (currentImage < urls.length - 1) ? currentImage +1 : currentImage; //Using the ternary operator
     showImages();
+   // console.log('next' + currentImage)
 });
+
+// if the condition is true (currentImage > 0), decrement currentImage (currentImage -1 ), if false set the currentImage to its current value
 
 previous.addEventListener('click', () => {
     currentImage = (currentImage > 0) ? currentImage -1 :currentImage; 
     showImages();
+   // console.log('previous' + currentImage)
 });
+
+
 
  setInterval(() => {
      // code to run EVERY 5 seconds
