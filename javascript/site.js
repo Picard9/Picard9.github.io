@@ -42,7 +42,7 @@ if(isMorning){
 localStorage.setItem(key, message)
 
 
-// CODE FOR ASSIGMENT WEEK 5
+// CODE FOR ASSIGMENT WEEK 6
 
 const urls = [
     'https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
@@ -85,8 +85,6 @@ previous.addEventListener('click', () => {
    // console.log('previous' + currentImage)
 });
 
-
-
  setInterval(() => {
      // code to run EVERY 5 seconds
      currentImage = (currentImage < urls.length - 1) ? currentImage + 1 : 0; 
@@ -94,3 +92,40 @@ previous.addEventListener('click', () => {
  }, 5000)
 
 
+// CODE FOR ASSIGMENT WEEK 7
+
+// Declare variables and Select DOM elements
+const todoList = document.querySelector('.todo-list');
+const input = document.querySelector('#new-todo');
+const btnCreatAdd = document.querySelector('#add-button');
+const li = document.createElement('li');
+
+// 2. Create a function renderTodos
+
+const renderTodos = () => {
+      todoList.innerHTML = ''  // Clear the list before we recreate them
+
+    // 3. Loop through the todos array and create list items
+    todos.forEach(todo => {
+        li.textContent = todo.text;
+        todoList.append(li)
+    });
+};
+
+// Get the list from local storage
+const todos = JSON.parse(localStorage.getItem('todo-list')) || [];
+
+// Event listener for adding a new todo
+btnCreatAdd.addEventListener('click', () => {
+ 
+        // Add a new item to the list
+        todos.push({ text: input.value, completed: false });
+        
+        // Save the list to local storage
+        localStorage.setItem('todo-list', JSON.stringify(todos));
+
+        input.value = ''; //Added to Clear the input once I click on the button
+        renderTodos(); //call the function created in step 2 to update the html.
+});
+
+renderTodos(); //call the function created in step 2 to update the html.
