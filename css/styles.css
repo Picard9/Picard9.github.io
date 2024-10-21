@@ -90,6 +90,10 @@ footer {
     /* height: 100%;
     background-color: aqua; */
 }
+.todo-list{
+    /* background-color: aqua; */
+    height: 24em;
+}
 #add-button{
     margin-top: 2%;
     &:hover{
@@ -125,13 +129,14 @@ footer {
 /* Code from Week 5 */
 #carousel {
     display: flex;
-    justify-content: right;
-    align-items: center;
-    width: 100%;
+    justify-content: left;
+    align-items: left;
+    width: 70%;
     max-height: 300px;
     overflow: hidden;
     gap: 10px;
-    padding: 20px auto;
+    padding: 0 0 0 73px;
+    /* margin-left: 10px; */
 }
 
 #carousel img {
@@ -139,16 +144,22 @@ footer {
     aspect-ratio: auto 300 / 400;
     border-radius: 10px;
     margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
 
 }
 
 #buttons {
     display: flex;
     justify-content: left;
-    position:relative;
-    left: 284px;
-    align-items: center;
+    /* position:fixed; */
+    left: 72;
+    align-items: right;
     gap: 10px;
     margin-top: 20px;
+    margin-left: 29%;
+}
+
+.favorite{
+    margin-top: 0px;
+
 }

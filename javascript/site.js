@@ -98,22 +98,23 @@ previous.addEventListener('click', () => {
 const todoList = document.querySelector('.todo-list');
 const input = document.querySelector('#new-todo');
 const btnCreatAdd = document.querySelector('#add-button');
-const li = document.createElement('li');
+//const li = document.createElement('li');
+
+// Get the list from local storage
+const todos = JSON.parse(localStorage.getItem('todo-list')) || [];
 
 // 2. Create a function renderTodos
 
 const renderTodos = () => {
-      todoList.innerHTML = ''  // Clear the list before we recreate them
+     todoList.innerHTML = ''  // Clear the list before we recreate them
 
     // 3. Loop through the todos array and create list items
     todos.forEach(todo => {
+        const li = document.createElement('li');
         li.textContent = todo.text;
-        todoList.append(li)
+        todoList.append(li);
     });
 };
-
-// Get the list from local storage
-const todos = JSON.parse(localStorage.getItem('todo-list')) || [];
 
 // Event listener for adding a new todo
 btnCreatAdd.addEventListener('click', () => {
@@ -125,7 +126,9 @@ btnCreatAdd.addEventListener('click', () => {
         localStorage.setItem('todo-list', JSON.stringify(todos));
 
         input.value = ''; //Added to Clear the input once I click on the button
+
         renderTodos(); //call the function created in step 2 to update the html.
 });
 
 renderTodos(); //call the function created in step 2 to update the html.
+
