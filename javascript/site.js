@@ -120,10 +120,10 @@ const renderTodos = () => {
 btnCreatAdd.addEventListener('click', () => {
  
         // Add a new item to the list
-        todos.push({ text: input.value, completed: false });
+        todos.push({ text: input.value, completed: false }); //Array format (the Arrasy is named todos)
         
         // Save the list to local storage
-        localStorage.setItem('todo-list', JSON.stringify(todos));
+        localStorage.setItem('todo-list', JSON.stringify(todos)); //LocalStorage Key value: 'todo-list', And convert the Array to string : JSON.stringify(todos)
 
         input.value = ''; //Added to Clear the input once I click on the button
 
@@ -132,3 +132,34 @@ btnCreatAdd.addEventListener('click', () => {
 
 renderTodos(); //call the function created in step 2 to update the html.
 
+
+
+// CODE FOR ASSIGMENT WEEK 8
+
+//  2. Create an arrow function called getRandomPokemon that will fetch a random pokemon from the PokeAPI
+
+const getRandomPokemon  = async () => {
+    const url = 'https://pokeapi.co/api/v2/pokemon/' + Math.floor(Math.random() * 150);
+    const response = await fetch(url)
+    const pokemon = await response.json()
+    return pokemon
+}
+
+//3. Create an arrow function called renderPokemon
+const renderPokemon = pokemon =>{
+    const PokeNames = document.querySelector('.holdImage > p')
+    const parentElement = document.querySelector('.holdImage');
+    const img = document.createElement('img')
+    img.src = pokemon.sprites.front_default// url of the image from the 'front_default' property
+    img.alt = pokemon.name// name of the pokemon
+    PokeNames.append(img.alt)
+    parentElement.append(img)
+
+}
+
+
+// invoke functions to display the images in my homepage    
+(async () => {
+    const invoke = await getRandomPokemon();
+    renderPokemon(invoke);
+})() //Execute directly

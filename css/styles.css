@@ -79,8 +79,9 @@ footer {
 
 .left {
     float: left;
-    margin: -7px 10px -3px 0px;
+    margin: -7px 12px -57px 0px;
     width: 200px;
+    height: 206px;
 }
 .left {
     clear: both;
@@ -112,6 +113,8 @@ footer {
     float: right;
     margin-left: 56px;
     width: 200px;
+    margin-top: -156px;
+    margin-bottom: 10px;
 }
 .right h3 {
     display: flex;
@@ -135,7 +138,7 @@ footer {
     max-height: 300px;
     overflow: hidden;
     gap: 10px;
-    padding: 0 0 0 73px;
+    padding: 10px 0 0 73px;
     /* margin-left: 10px; */
 }
 
@@ -144,7 +147,8 @@ footer {
     aspect-ratio: auto 300 / 400;
     border-radius: 10px;
     margin-right: 20px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    margin-top: 63px;
 
 }
 
@@ -162,4 +166,13 @@ footer {
 .favorite{
     margin-top: 0px;
 
+}
+
+.getClass{
+    background-color: red;
+}
+
+.holdImage{
+    margin-top: 167px;
+    text-align: center;
 }
