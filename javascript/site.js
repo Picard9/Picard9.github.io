@@ -134,7 +134,7 @@ renderTodos(); //call the function created in step 2 to update the html.
 
 
 
-// CODE FOR ASSIGMENT WEEK 8
+// CODE FOR ASSIGMENT WEEK 8 : Assignment 7 - API Fetch
 
 //  2. Create an arrow function called getRandomPokemon that will fetch a random pokemon from the PokeAPI
 
@@ -158,8 +158,9 @@ const renderPokemon = pokemon =>{
 }
 
 
-// invoke functions to display the images in my homepage    
+//I use IIFEs to invoke functions to display the images in my homepage immediately  
 (async () => {
     const invoke = await getRandomPokemon();
     renderPokemon(invoke);
-})() //Execute directly
+})() //Execute immediately
+
